@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title>* 3D *</title>
+    <link href="art.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="script.js" />
+    <link rel="stylesheet" href="https://use.typekit.net/whh7adc.css" />
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Gallery</title>
+    <link rel="stylesheet" href="https://use.typekit.net/css" />
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "pragmatapro-fraktur", serif;
+            font-weight: 600;
+            font-style: normal;
+            margin: 0;
+            padding: 0;
+            color: #daed5a;
+            background-image: url("glitch-assets/cellular-bg.jpg");
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .header-box {
+            background-color: rgba(0, 0, 0, 0.2);
+            width: auto;
+            max-width: 100%;
+            border-radius: 10px;
+            margin: 0.1em auto;
+            border: 2px dashed #edb651;
+            outline: 2px dotted #edb651;
+            outline-offset: 1.5px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .body-box {
+            background-color: rgba(158, 9, 62, 0.4);
+            width: 1300px;
+            max-width: 100%;
+            border-radius: 30px;
+            margin: 2em auto;
+            border: 2px dashed #00323c;
+            outline: 2px dotted #00323c;
+            outline-offset: 5px;
+            padding: 20px;
+        }
+
+        header {
+            font-size: 100px;
+            margin: 10px;
+            display: flex;
+            text-align: center;
+  font-family: bd-geminis, sans-serif;
+
+           
+            font-style: normal;
+            font-weight: 400;
+            margin: 1rem 0;
+            justify-content: center;
+        }
+
+        header div {
+            margin: 5px 10px 10px;
+            text-shadow: 3px 3px #592139;
+            color: #daed5a;
+        }
+
+        h1 {
+            font-family: bd-geminis, sans-serif;
+            font-style: normal;
+            font-weight: 400;
+            color: #62ff14;
+            font-size: 1.8em;
+            text-align: center;
+        }
+
+        h2 {
+            font-family: "input-mono", monospace;
+            font-size: 1.15rem;
+            color: #d3ff82;
+            letter-spacing: 3px;
+            text-align: center;
+        }
+
+        h3 {
+            font-family: "hydrophilia-liquid", sans-serif;
+            font-style: normal;
+            font-weight: 400;
+            text-shadow: 2px 2px #400b1f;
+            color: #d3ff8a;
+            line-height: 20px;
+            text-align: center;
+            letter-spacing: 2px;
+            font-size: 1.5em;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 auto;
+            padding: 0;
+            align-items: flex-start;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .project-card {
+            background-color: rgba(0, 0, 0, 0.3);
+            border: 2px ridge #edb651;
+            border-radius: 5px;
+            background: linear-gradient(#00323c, #12542b);
+            padding: 20px;
+            flex: 1 1 30%;
+            max-width: 400px;
+            min-width: 300px;
+            position: relative;
+            cursor: pointer;
+        }
+
+          .project-image {
+            width: 100%;
+            height: 200px;
+            background-color: rgba(0, 0, 0, 0.2);
+            border: 2px dashed #edb651;
+            outline: 2px dotted #edb651;
+            outline-offset: 1.5px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 15px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .project-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .project-title {
+            font-family: "hydrophilia-iced", sans-serif;
+            font-style: normal;
+            font-weight: 400;
+            color: #d3ff8a;
+            text-align: center;
+            letter-spacing: 2px;
+            font-size: 1.3em;
+            margin: 1rem 0;
+        }
+
+        .project-description {
+            font-family: "input-mono", monospace;
+            color: #daed5a;
+            font-size: 0.75rem;
+            line-height: 1.5;
+            text-align: center;
+            margin: 1rem 0;
+          opacity:1;
+        }
+      
+
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            justify-content: center;
+            margin: 1rem 0;
+        }
+
+        .tag {
+            font-family: "input-mono", monospace;
+            font-size: 0.75rem;
+            color: #d3ff82;
+            background-color: rgba(0, 0, 0, 0.2);
+            border: 1px dashed #edb651;
+            border-radius: 5px;
+            padding: 4px 8px;
+            letter-spacing: 1px;
+        }
+
+        .project-links {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin-top: 15px;
+        }
+
+        .project-link {
+            font-family: "hydrophilia-iced", sans-serif;
+            color: #4f6306;
+            display: block;
+            border-radius: 30px;
+            outline: 2px dotted #edb651;
+            outline-offset: 2px;
+            font-weight: 400;
+            font-style: normal;
+            padding: 8px 16px;
+            text-decoration: none;
+            text-align: center;
+            font-size: 16px;
+            background-color: rgba(218, 237, 90, 0.7);
+            min-width: 80px;
+        }
+      
+      .project-link:hover {
+    color: #62ff14;
+}
+
+        .ascii-art {
+            font-family: monospace;
+            white-space: pre;
+            text-align: center;
+            color: #daed5a;
+            margin: 20px 0;
+        }
+
+        @media (max-width: 768px) {
+            .gallery {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .project-card {
+                flex: 1 1 100%;
+                max-width: 90%;
+            }
+            
+            header {
+                font-size: 60px;
+            }
+            
+            .body-box {
+                margin: 1em auto;
+                padding: 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header {
+                font-size: 40px;
+            }
+            
+            .project-card {
+                min-width: 280px;
+            }
+        }
+
+        /* Scroll animation */
+       
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+  <body id="top">
+    
+  
+      <header>
+        
+        <span>
+          
+        
+      CGI
+          
+          </span>
+    </header>
+        
+   
+    
+    
+    <div class="body-box">
+        <div class="gallery" id="gallery">
+            <!-- Projects will be dynamically generated -->
+        </div>
+    </div>
+
+    <script>
+        // Sample project data
+        const projects = [
+            {
+                title: "Evogeneao Game",
+                description: "A user-navigable world, inspired by the evolutionary tree of life diagram, is populated with speculative creatures adapted to the ecosystems of five imagined islands. ",
+                tags: ["Unity", "Blender", "Zbrush", "C/C#"],
+                image: "glitch-assets/3d-cover.jpg",
+                buttonText: "Play",
+              links: {
+                    demo: "https://play.unity.com/en/games/bd86650d-5819-49b0-a4be-c7f25b4187e2/evogeneao" 
+                    
+                }
+            },
+          
+             {
+                title: "Genesis: Earth Diver",
+                description: "Animation of a speculative world inspired by the creation architecture in Genesis. Mythological creatures and extinct animals occupy the same lush ecosystem.",
+                tags: ["Blender", "Zbrush", "Substance Painter"],
+                image: "glitch-assets/genesis-cover.jpg",
+                buttonText: "View",
+                links: {
+                    demo: "https://vimeo.com/1080895104"
+                }
+            },
+          
+            {
+                title: "Unformed Space",
+                description: "While wading in a shallow primordial ocean suspended in unformed space, you must find the Edge with the cryptic guidance of the animals that live there. ",
+                tags: ["Unity", "Blender", "C/C#"],
+                image: "glitch-assets/unformed-cover.jpg",
+                buttonText: "Play",
+                links: {
+                    demo: "https://3lfritz.itch.io/edge-of-unformed-space"
+                }
+            },
+        
+           {
+                title: "Demo Reel 2025",
+                description: "Animation showcase including CGI, stop-motion, fluid simulation, environment design, and creature sculpting.",
+                tags: ["Zbrush", "Blender", "Houdini"],
+                image: "glitch-assets/glowingriver.jpg",
+                buttonText: "View",
+                links: {
+                    demo: "https://vimeo.com/1051279324",
+                    
+                }
+            },
+            
+          {
+                title: "Image Renders",
+                description: "Still image renders of 3D environments, creatures, and game assets.",
+                tags: ["Blender", "Zbrush", "Adobe Suite"],
+                image: "glitch-assets/newcreatureguppy.jpg",
+                buttonText: "Visit",
+                links: {
+                    demo: "render.html",
+                    
+                }
+            },
+          
+           
+            {
+                title: "The Big Spawn",
+                description: "At the same time each year, a summer full moon sparks a unified spawn of tiny coral larvae.",
+                tags: ["Blender", "3D Scanning", "Mobile"],
+                image: "glitch-assets/moonskate.jpg",
+                buttonText: "View",
+                links: {
+                    demo: "https://vimeo.com/1001774532",
+                    
+                }
+            },
+           {
+                title: "3D Bestiary",
+                description: "Web documentation of the creatures in the game Evogeneao. Includes embedded 3D files.",
+                tags: ["HTML", "CSS", "AR.js", "Blender"],
+                image: "glitch-assets/3d-bestiary.jpg",
+                buttonText: "Visit",
+                links: {
+                    demo: "https://petri-soup.github.io/3D-bestiary/",
+                    
+                }
+            },
+        ];
+
+        function createProjectCard(project, index) {
+            return `
+                <div class="project-card" onclick="handleProjectClick('${project.title}')" >
+                    <div class="project-image">
+<img src="${project.image}" alt="${project.title}" />
+                    </div>
+                    <h3 class="project-title">${project.title}</h3>
+                    <p class="project-description">${project.description}</p>
+                    <div class="project-tags">
+                        ${project.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
+                    </div>
+                    <div class="project-links">
+    <a href="${project.links.demo}" class="project-link" onclick="event.stopPropagation()">${project.buttonText}</a>
+</div>
+                </div>
+            `;
+        }
+
+        function handleProjectClick(projectTitle) {
+            console.log(`Clicked on project: ${projectTitle}`);
+            // Add your project click handling logic here
+        }
+
+        function renderGallery() {
+            const gallery = document.getElementById('gallery');
+            gallery.innerHTML = projects.map((project, index) => createProjectCard(project, index)).join('');
+        }
+
+        // Initialize gallery on page load
+        document.addEventListener('DOMContentLoaded', renderGallery);
+    </script>
+</body>
+   <div class="up"><a href="https://petri-soup.github.io/petrisoup/">home</a></div>
+</html>
