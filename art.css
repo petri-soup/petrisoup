@@ -104,6 +104,7 @@ nav {
   border: 2px dashed #0f3329;
   outline: 2px dotted #0f3329;
   outline-offset: 5px;
+  padding: 20px;
 }
 
 .image {
