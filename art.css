@@ -190,6 +190,26 @@ h2 {
    
 }
 
+h3 {
+  font-family: "input-mono", monospace;
+  font-size: 1.15rem;
+  color: #0d202b;
+ 
+  letter-spacing:3px;
+  text-align:center;
+   
+}
+
+h4 {
+  font-family: "input-mono", monospace;
+  font-size: 0.9rem;
+  color: #0d202b;
+ 
+  letter-spacing:3px;
+  text-align:center;
+   
+}
+
 h1,
 h2,
 h3,
