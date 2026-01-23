@@ -51,16 +51,6 @@ iframe {
   flex: 1 1 50%
 }
 
-.header-box {
-  background-color: rgba(0, 0, 0, 0.2);
-  width: 1200px;
-  max-width: 100%;
-  border-radius: 10px;
-  margin: 0.1em auto;
-  border: 2px dashed #edb651;
-  outline: 2px dotted #edb651;
-  outline-offset: 1.5px;
-}
 
 
 .image-container > img:hover {
@@ -107,12 +97,12 @@ nav {
 
 .body-box {
   background-color: rgba(0, 0, 0, 0.5);
-  width: 900px;
+  width: 1000px;
   max-width: 100%;
   border-radius: 30px;
   margin: 2em auto;
-  border: 2px dashed #edb651;
-  outline: 2px dotted #edb651;
+  border: 2px dashed #0f3329;
+  outline: 2px dotted #0f3329;
   outline-offset: 5px;
 }
 
@@ -339,12 +329,13 @@ header span {
 
 .header-box {
   background-color: rgba(0, 0, 0, 0.5);
-  width: auto;
+  width: 1000px;
+  
  padding: auto;
  
 
-  border: 2px dotted #edb651;
-  outline: 2px dotted #edb651;
+  border: 2px dotted #0f3329;
+  outline: 2px dotted #0f3329;
   outline-offset: 0.5px;
 }
 
