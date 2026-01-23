@@ -53,7 +53,7 @@ iframe {
 
 .header-box {
   background-color: rgba(0, 0, 0, 0.2);
-  width: auto;
+  width: 1200px;
   max-width: 100%;
   border-radius: 10px;
   margin: 0.1em auto;
@@ -190,25 +190,7 @@ h2 {
    
 }
 
-h3 {
-  font-family: "input-mono", monospace;
-  font-size: 1.15rem;
-  color: #0d202b;
- 
-  letter-spacing:3px;
-  text-align:center;
-   
-}
 
-h4 {
-  font-family: "input-mono", monospace;
-  font-size: 0.8rem;
-  color: #0d202b;
- 
-  letter-spacing:1.5px;
-  text-align:center;
-   
-}
 
 h1,
 h2,
@@ -266,12 +248,11 @@ h3 {
 
 h4 {
  font-family: "input-mono", monospace;
-  font-size: .95rem;
+  font-size: .8rem;
   font-weight: normal;
   text-align: left;
   color: #d3ff82;
- 
-  text-align:center;
+
    
 }
 
