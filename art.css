@@ -106,8 +106,8 @@ nav {
 
 
 .body-box {
-  background-color: rgba(0, 0, 0, 0.3);
-  width: 1300px;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 900px;
   max-width: 100%;
   border-radius: 30px;
   margin: 2em auto;
@@ -202,10 +202,10 @@ h3 {
 
 h4 {
   font-family: "input-mono", monospace;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   color: #0d202b;
  
-  letter-spacing:3px;
+  letter-spacing:1.5px;
   text-align:center;
    
 }
