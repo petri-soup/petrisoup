@@ -236,6 +236,9 @@ h3 {
   
 }
 
+h3:hover{
+  color: #fa9b1e;
+
 h4 {
  font-family: "input-mono", monospace;
   font-size: .85rem;
